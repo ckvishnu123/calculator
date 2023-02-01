@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <form action="" [formGroup]="signupform" (ngSubmit)="register()">
+                <div class="mb-2">
+                    <input type="text" placeholder="first_name" formControlName="first_name"></div>
+                <div class="mb-2">
+                    <input type="text" placeholder="last_name" formControlName="last_name"></div>
+                <div class="mb-2">
+                    <input type="email" placeholder="email" formControlName="email"></div>
+                    <div class="text-danger form-text" *ngIf="email?.touched && email?.invalid">Invalid email</div>
+                <div class="mb-2">
+                    <input type="text" placeholder="username" formControlName="username"></div>
+                    <div class="text-danger form-text" *ngIf="username?.touched && username?.invalid">Invalid username</div>
+                <div class="mb-2">
+                    <input type="password" placeholder="password" formControlName="password"></div>
+                    <div class="text-danger form-text" *ngIf="password?.touched && password?.invalid">Invalid password</div>
+
+                <button class="btn btn-info" type="submit" [disabled]="signupform.invalid">Register</button>
+            </form>
+        </div>
+        <div class="col-2"></div>
+    </div>
+</div>

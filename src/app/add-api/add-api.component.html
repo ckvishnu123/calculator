@@ -1,0 +1,18 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <!-- template variable - #variablename -->
+            <div class="mb-3">
+            <input type="text" #inpt1 class="form-control" placeholder="Enter first number">
+            </div>
+            <div class="mb-3">
+            <input type="text" #inpt2 class="form-control" placeholder="Enter second number">
+            </div>
+            <!-- event binding - (event) -->
+            <button class="btn btn-info" (click)="addNumber(inpt1, inpt2)">Add</button>
+        </div>
+
+        <div class="col-2"></div>
+    </div>
+    <h4 class="text-center mb-5 text-success">Result -{{result}} </h4>
